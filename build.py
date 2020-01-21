@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 
 #This script builds a standalone version of mergepbx.py
 #all scripts are bundled into one single file that can be easily distributed
@@ -20,7 +20,7 @@ import fnmatch
 HEADER = \
 """\
 #!/bin/sh
-PYTHON=$(which python 2>/dev/null)
+PYTHON=$(which python2 2>/dev/null)
 if [ ! -x "$PYTHON" ] ; then
     echo "Python executable not found - can't continue!"
     echo "Please install Python (>= 2.3) to run this program"
