@@ -167,10 +167,10 @@ class PBXProjectFileMerger3(Merger):
 
     def merge_objectVersion(self, result, base, mine, theirs):
         objectVersion = _get_3("objectVersion", base, mine, theirs)
-        if not objectVersion.base == objectVersion.mine or not objectVersion.base == objectVersion.theirs:
-            raise MergeException("can not merge projects with different objectVersion")
-        if not int(objectVersion.base) in self.SUPPORTED_OBJECT_VERSIONS:
-            raise MergeException("can not merge projects with objectVersion %s" % objectVersion.base)
+        # if not objectVersion.base == objectVersion.mine or not objectVersion.base == objectVersion.theirs:
+        #     raise MergeException("can not merge projects with different objectVersion")
+        # if not int(objectVersion.base) in self.SUPPORTED_OBJECT_VERSIONS:
+        #     raise MergeException("can not merge projects with objectVersion %s" % objectVersion.base)
 
         result["objectVersion"] = objectVersion.base
 
