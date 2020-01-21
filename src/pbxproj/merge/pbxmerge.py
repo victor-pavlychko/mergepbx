@@ -221,6 +221,9 @@ class PBXBuildFileMerger3(_AbstractPBXBuildObjectMerger3):
 class PBXCopyFilesBuildPhaseMerger3(_AbstractPBXBuildObjectMerger3):
     pass
 
+class PBXBuildRuleMerger3(_SimpleDictMerger3):
+    pass
+
 class PBXFileReferenceMerger3(_SimpleDictMerger3):
 
     def merge_lastKnownFileType(self, base, mine, theirs, result, diff3):

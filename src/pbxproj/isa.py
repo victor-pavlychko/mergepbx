@@ -75,6 +75,13 @@ class PBXContainerItemProxy(PBXISA, PBXISADictionaryBound):
     def get_name(self, project):
         return "PBXContainerItemProxy"
 
+class PBXBuildRule(PBXISA, PBXISADictionaryBound):
+    def __init__(self, *args, **kwargs):
+        super(PBXBuildRule, self).__init__(*args, **kwargs)
+
+    def get_name(self, project):
+        return "PBXBuildRule"
+
 class PBXFileReference(PBXISA, PBXISADictionaryBound):
     def __init__(self, *args, **kwargs):
         super(PBXFileReference, self).__init__(*args, **kwargs)
